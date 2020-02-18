@@ -9,6 +9,7 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <link rel ="stylesheet" href="./Assets/CSS/style.css">
     <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="./Assets/JS/script.js"></script>
     <title>Weather Dashboard</title>
 </head>
@@ -32,7 +33,7 @@
         </p>
         <div class="panel-block">
           <p class="control has-icons-left">
-            <input class="input" type="text" placeholder="Search">
+            <input class="input searchBar" type="text" placeholder="Search">
             <span class="icon is-left">
               <i class="fas fa-search" aria-hidden="true"></i>
             </span>
@@ -43,36 +44,16 @@
           </div>
         </div>
     
-        <a class="panel-block is-active">
-          <span class="panel-icon">
-            <i class="far fa-sun" aria-hidden="true"></i>
-          </span>
+        <a class="panel-block is-active currentData">
           Los Angeles
         </a>
-        <a class="panel-block">
-          <span class="panel-icon">
-            <i class="far fa-sun" aria-hidden="true"></i>
-          </span>
-          Honolulu
+        <a class="panel-block is-active exDataOne">
+            New York
         </a>
-        <a class="panel-block">
-          <span class="panel-icon">
-            <i class="far fa-sun" aria-hidden="true"></i>
-          </span>
-          Tokyo
+        <a class= "panel-block is-active exDataTwo">
+            Honolulu
         </a>
-        <a class="panel-block">
-          <span class="panel-icon">
-            <i class="far fa-sun" aria-hidden="true"></i>
-          </span>
-          Sydney
-        </a>
-        <a class="panel-block">
-          <span class="panel-icon">
-            <i class="far fa-sun" aria-hidden="true"></i>
-          </span>
-          New York 
-        </a>
+        <a class="panel-block is-active historySearch"></a>
     </nav>
     
     <!-- Current Forecast -->
@@ -80,11 +61,12 @@
     <div class="tile is-ancestor currentWeather">
         <div class="tile is-parent">
             <div class="tile is-child is-horizontal is-fullwidth box">
-                <strong class="cityTitle level"></strong>
-                <p class="cityTemp level-item"><b>Temperature:</b> </p>
-                <p class="cityHumidity level-item"><b>Humidity:</b> </p>
-                <p class="cityWind level-item"><b>Wind Speed:</b> </p>
-                <p class="cityUV level-item"><b>UV Index:</b> </p>
+                <strong class="cityTitle has-text-centered level"></strong>
+                <img src=" " class="weatherImg">
+                <p class="cityTemp level-item"> </p>
+                <p class="cityHumidity level-item"> </p>
+                <p class="cityWind level-item"></p>
+                <p class="cityUV level-item"></p>
             </div>
         </div>
     </div>

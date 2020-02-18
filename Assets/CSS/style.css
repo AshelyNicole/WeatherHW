@@ -15,7 +15,12 @@ h2 {
 
 /* Current Weather */
 .currentWeather{
-    
+    box-sizing: inherit;
+}
+
+.cityTitle{
+    text-align: center;
+    font-size: 30px
 }
 
 

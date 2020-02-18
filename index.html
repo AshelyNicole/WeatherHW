@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <!-- Bulma CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel ="stylesheet" href="./Assets/CSS/style.css">
+    <!-- JS -->
+    <script src="./Assets/JS/script.js"></script>
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <!-- Header -->
+    <section class="hero is-bold has-text-centered is-dark">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    Weather Dashboard
+                </h1>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Nav Panel -->
+    <nav class="panel sticky">
+        <p class="panel-heading">
+          Search for a City:
+        </p>
+        <div class="panel-block">
+          <p class="control has-icons-left">
+            <input class="input" type="text" placeholder="Search">
+            <span class="icon is-left">
+              <i class="fas fa-search" aria-hidden="true"></i>
+            </span>
+          </p>
+            <button class="button is-link is-outlined ">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+    
+        <a class="panel-block is-active">
+          <span class="panel-icon">
+            <i class="far fa-sun" aria-hidden="true"></i>
+          </span>
+          Los Angeles
+        </a>
+        <a class="panel-block">
+          <span class="panel-icon">
+            <i class="far fa-sun" aria-hidden="true"></i>
+          </span>
+          Honolulu
+        </a>
+        <a class="panel-block">
+          <span class="panel-icon">
+            <i class="far fa-sun" aria-hidden="true"></i>
+          </span>
+          Tokyo
+        </a>
+        <a class="panel-block">
+          <span class="panel-icon">
+            <i class="far fa-sun" aria-hidden="true"></i>
+          </span>
+          Sydney
+        </a>
+        <a class="panel-block">
+          <span class="panel-icon">
+            <i class="far fa-sun" aria-hidden="true"></i>
+          </span>
+          New York 
+        </a>
+    </nav>
+    
+    <!-- Current Forecast -->
+  
+    <div class="tile is-ancestor currentWeather">
+        <div class="tile is-parent">
+            <div class="tile is-child is-horizontal is-fullwidth box">
+                <strong class="cityTitle level"></strong>
+                <p class="cityTemp level-item"><b>Temperature:</b> </p>
+                <p class="cityHumidity level-item"><b>Humidity:</b> </p>
+                <p class="cityWind level-item"><b>Wind Speed:</b> </p>
+                <p class="cityUV level-item"><b>UV Index:</b> </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Five Day Forecast -->
+    <br>
+    <h2 class="has-text-centered"><strong>5 Day Forecast:</strong></h2>
+    <br>
+    <div class="tile is-ancestor forecast box">
+        <div class="tile is-parent fiveDays">
+            <div class="tile is-child notifcation is-info box">
+                <p class="level dayOne">insert info</p>
+                <p class="level-item oneData">Temp/Humidity</p>
+            </div>
+        </div>
+
+        <div class="tile is-parent fiveDays">
+            <div class="tile is-child is-info box">
+                <p class="level dayTwo">insert info</p>
+                <p class="level-item twoData">Temp/Humidity</p>
+            </div>
+        </div>    
+
+        <div class="tile is-parent fiveDays"> 
+            <div class="tile is-child is-info box">
+                <p class="level dayThree">insert info</p>
+                <p class="level-item threeData">Temp/Humidity</p>
+            </div>
+        </div>     
+
+        <div class="tile is-parent fiveDays"> 
+            <div class="tile is-child is-info box">
+                <p class="level dayFour">insert info</p>
+                <p class="level-item forthData">Temp/Humidity</p>
+            </div>
+        </div>   
+
+        <div class="tile is-parent fiveDays">
+            <div class="tile is-child is-info box">
+                <p class="level dayFive">insert info</p>
+                <p class="level-item fifthData">Temp/Humidity</p>
+            </div>
+        </div>   
+        
+    </div>
+
+
+
+    
+</body>
+</html>

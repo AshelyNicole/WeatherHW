@@ -1,0 +1,26 @@
+.title {
+    color: #27d1b2;
+}
+
+h2 {
+    font-size: 25px;
+}
+/* Nav Panel */
+.panel {
+    max-width: 30%;
+}
+
+
+
+
+/* Current Weather */
+.currentWeather{
+    
+}
+
+
+/* 5 Day Forecast */
+.is-info {
+    background-color: #27d1b2;
+    color: #ffffff;
+}

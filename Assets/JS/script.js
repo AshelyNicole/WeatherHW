@@ -1,32 +1,31 @@
 var APIKey = "&appid=f56c94699b79bf806441d23eacbfa401";
-var imgIcon = ["01d.png", "02d.png", "03d.png", "04d.png", "09d.png","10d.png", "11d.png", "13d.png", "50d.png"]
-var weatherImg = "https://openweathermap.org/img/wn" + imgIcon;
+var weather = {};
+var location = "";
 
-var forecastURL = "https://api.openweathermap.org/data/2.5/forecast?" + "q={city name},{state}&units=imperial&appid=" + APIKey ;
+// Current Weather 
+location=$("#locationInp").val()
+console.log("we're searching for location ",location)
+var weatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=f56c94699b79bf806441d23eacbfa401`
 
-// Current Weather Los Angeles
-var losAngelesURL = "https://api.openweathermap.org/data/2.5/weather?q=Los+Angeles&units=imperial" + APIKey;
-var laUVIndex = "https://"
-
-$.ajax({
-    url: losAngelesURL,
-    method: "GET"
-}).then(function(response) {
-    console.log(losAngelesURL)
-    console.log(response)
-    $(".cityTitle").html("<strong>" + response.name)
-    $(".weatherImg").html(weatherImg)
-        console.log(weatherImg)
-    $(".cityTemp").html("Temperature:" + " " + response.main.temp)
-    $("cityHumidity").html("Humidity:" + " " + response.main.humidity)
-        console.log(response.main.humidity)
-    $(".cityWind").html("Wind Speed:" + " " + response.wind.speed)
-
+$.get(weatherURL, function(param){
+    console.log("success callback")
+    weather.name=param.name
+    weather.state=param.weather[0].description
+    weather.temp=param.main.temp
+    weather.wind=param.wind.speed
+    weather.icon=param.weather[0].icon
+    console.log("weather",weather)
 })
 
-
-
+// Weather Display 
+$("#weatherName").text(weather.name)
+$("#weatherState").text(weather.state)
+$("#weatherTemp").text(weather.temp)
+$("#weatherWind").text(weather.wind)
+$("#weatherIcon").attr("src", `http://openweathermap.org/img/wn/${weather.icon}.png`)
+hideExcept([".homeButton",".page2"]);
 //Search Query
 
 
 //Five Day Forecast
+var forecastURL = "https://api.openweathermap.org/data/2.5/forecast?" + "q={city name},{state}&units=imperial&appid=" + APIKey ;

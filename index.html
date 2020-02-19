@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!<DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -26,8 +26,22 @@
     </section>
 
 
-    <!-- Nav Panel -->
-    <nav class="panel sticky">
+    <!-- Menu-->
+    <aside class="menu">
+        <p class="menu-heading">Search for a City:</p>
+            <input class="input" id="locationInput" type="text" placeholder= "Location">
+            <span class="icon is-left">
+                <i class="fas fa-search" aria-hidden="true"></i>
+            </span>
+        </p>
+        <button class="button is-link is-outlined" id="searchBtn forecastBtn">
+            <i class="fas fa-search"></i>
+        </button>
+        <ul class="menu-list search-History">
+            <li></li>
+        </ul>
+    </aside>
+    <!-- <nav class="panel sticky">
         <p class="panel-heading">
           Search for a City:
         </p>
@@ -54,19 +68,19 @@
             Honolulu
         </a>
         <a class="panel-block is-active historySearch"></a>
-    </nav>
+    </nav> -->
     
     <!-- Current Forecast -->
   
     <div class="tile is-ancestor currentWeather">
         <div class="tile is-parent">
             <div class="tile is-child is-horizontal is-fullwidth box">
-                <strong class="cityTitle has-text-centered level"></strong>
-                <img src=" " class="weatherImg">
-                <p class="cityTemp level-item"> </p>
-                <p class="cityHumidity level-item"> </p>
-                <p class="cityWind level-item"></p>
-                <p class="cityUV level-item"></p>
+                <strong class="has-text-centered level"> Location: <span id="cityTitle"></span></strong>
+                <img src="http://openweatherma.org/img/win/02d.png" class="weatherImg">
+                <p class="level-item"> Temperature: <span id="cityTemp"></span></p>
+                <p class="level-item"> Humidity: <span id="cityHumidity"></span></p>
+                <p class="level-item"> Wind Speed: <span id="cityWind"></span></p>
+                <p class="level-item"> UV Index: <span id="cityUV"></span></p>
             </div>
         </div>
     </div>

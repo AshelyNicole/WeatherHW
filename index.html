@@ -8,9 +8,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <link rel ="stylesheet" href="./Assets/CSS/style.css">
-    <!-- JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="./Assets/JS/script.js"></script>
     <title>Weather Dashboard</title>
 </head>
 <body>
@@ -44,17 +41,6 @@
             </button>
           </div>
         </div>
-    
-        <a class="panel-block is-active currentData">
-          Los Angeles
-        </a>
-        <a class="panel-block is-active exDataOne">
-            New York
-        </a>
-        <a class= "panel-block is-active exDataTwo">
-            Honolulu
-        </a>
-        <a class="panel-block is-active historySearch"></a>
     </nav>
     
     <!-- Current Forecast -->
@@ -67,7 +53,7 @@
                 <p class="level-item"> Temperature: <span id="cityTemp"></span></p>
                 <p class="level-item"> Humidity: <span id="cityHumidity"></span></p>
                 <p class="level-item"> Wind Speed: <span id="cityWind"></span></p>
-                <p class="level-item"> UV Index: <span id="cityUV"></span></p>
+                <p class="uvlevel-item"> UV Index: <span id="cityUV"></span></p>
             </div>
         </div>
     </div>
@@ -114,8 +100,8 @@
         
     </div>
 
-
-
-    
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./Assets/JS/script.js"></script>    
 </body>
 </html>
